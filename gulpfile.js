@@ -40,14 +40,14 @@ gulp.task('styles', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src(config.src.images + '/**/*')
+    return gulp.src([config.src.images + '/**/*'])
         .pipe($.plumber())
         .pipe(gulp.dest(config.dist.scripts))
         .pipe($.size({title: 'images'}));
 });
 
 gulp.task('scripts', function () {
-    return gulp.src( [config.src.scripts + '/*.js'])
+    return gulp.src([config.src.scripts + '/**/*.js'])
         .pipe($.plumber())
         .pipe(params.production ? $.uglify() : $.util.noop())
         .pipe(gulp.dest( config.dist.scripts ))
@@ -55,15 +55,16 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src( [config.src.base + '/**/*.html'])
+    return gulp.src([config.src.base + '/**/*.html'])
         .pipe(gulp.dest( config.dist.base ))
         .pipe($.size({title: 'html'}));
 });
 
 gulp.task('jshint', function () {
-    return gulp.src([config.src.scripts + '/**/*.js'])
+    gulp.src([config.src.scripts + '/**/*.js'])
         .pipe($.plumber())
-        .pipe($.jshint());
+        .pipe($.jshint())
+        .pipe($.jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('clean', function (cb) {
