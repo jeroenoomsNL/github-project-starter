@@ -528,7 +528,7 @@ code, pre {
   background: #3498db;
   padding: 2em 0;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .header {
     padding: 4em 0;
   }
