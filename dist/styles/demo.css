@@ -513,6 +513,17 @@ code, pre {
   margin-bottom: 1em;
 }
 
+.browserupgrade {
+  background: #f1c40f;
+  color: #000000;
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.browserupgrade a {
+  color: inherit;
+}
+
 .header {
   background: #3498db;
   padding: 2em 0;

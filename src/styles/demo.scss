@@ -63,6 +63,18 @@ code, pre {
     margin-bottom: 1em;
 }
 
+.browserupgrade {
+    background: #f1c40f;
+    color: #000000;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: center;
+
+    a {
+        color: inherit;
+    }
+}
+
 .header {
     background: $color-primary;
     padding: 2em 0;
