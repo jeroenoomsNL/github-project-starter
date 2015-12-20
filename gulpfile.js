@@ -73,6 +73,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('watch', ['build'], function () {
     browserSync.init({
+        reloadDelay: 100,
         server: {
             baseDir: './' + config.dist.base
         }
@@ -83,7 +84,7 @@ gulp.task('watch', ['build'], function () {
     gulp.watch([config.src.scripts + '/**/*.js'], ['scripts']);
     gulp.watch([config.src.base + '/**/*.html'], ['html']);
 
-    gulp.watch([config.dist.base + '/**/*']).on('change', browserSync.reload);
+    gulp.watch(config.dist.base + '/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('build', ['jshint', 'scripts', 'images', 'styles', 'html']);
