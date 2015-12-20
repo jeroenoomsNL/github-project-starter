@@ -9,7 +9,7 @@ Build with Gulp
 Watch locally
 `gulp watch`
 
-Deploy to Github pages
+Deploy to Github Pages
 `gulp deploy`
 or
 `gulp deploy --message 'My first commit'`  

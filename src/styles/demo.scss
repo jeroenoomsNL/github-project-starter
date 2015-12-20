@@ -79,7 +79,7 @@ code, pre {
     background: $color-primary;
     padding: 2em 0;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         padding: 4em 0;
     }
 
