@@ -28,6 +28,6 @@
     "trailing": true,
     "undef": true,
     "unused": "vars",
-    "ga": true,
-    "-W032": true
+    "-W032": true,
+    "predef": ["ga"]
 }
