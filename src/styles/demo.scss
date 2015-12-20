@@ -63,11 +63,23 @@ code, pre {
     margin-bottom: 1em;
 }
 
+.browserupgrade {
+    background: #f1c40f;
+    color: #000000;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: center;
+
+    a {
+        color: inherit;
+    }
+}
+
 .header {
     background: $color-primary;
     padding: 2em 0;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         padding: 4em 0;
     }
 
@@ -137,6 +149,7 @@ code, pre {
 
     .intro {
         font-size: 1.2em;
+        margin-bottom: 2em;
 
         @include breakpoint(lg) {
             max-width: 80%;
