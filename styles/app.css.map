@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss","app.css"],"names":[],"mappings":"AAAA;;GAEG;AAEH;EACC,iBAAgB;CCAhB","file":"app.css","sourcesContent":["/*\n * Styles for your application\n */\n\nbody {\n\tbackground: #eee;\n}","/*\n * Styles for your application\n */\nbody {\n  background: #eee;\n}\n\n\n"],"sourceRoot":"/source/"}
