@@ -149,6 +149,7 @@ code, pre {
 
     .intro {
         font-size: 1.2em;
+        margin-bottom: 2em;
 
         @include breakpoint(lg) {
             max-width: 80%;
