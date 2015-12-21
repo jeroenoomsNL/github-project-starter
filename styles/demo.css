@@ -500,17 +500,18 @@ a {
   color: #3498db;
 }
 
-code {
-  display: inline-block;
-  margin-top: 0.5em;
-}
-
 code, pre {
   background: white;
   border-radius: 0.3em;
   font-size: 0.8em;
-  padding: 1em 2em;
   margin-bottom: 1em;
+  padding: 1em 2em;
+}
+
+code {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.75em 1.5em;
 }
 
 .browserupgrade {
@@ -597,6 +598,7 @@ code, pre {
 }
 .main .intro {
   font-size: 1.2em;
+  margin-bottom: 2em;
 }
 @media (min-width: 960px) {
   .main .intro {
