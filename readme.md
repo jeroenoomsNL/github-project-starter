@@ -1,5 +1,5 @@
 # Github Project Starter
-A boilerplate for Github frontend projects to save time on creating a build process and a demo pages for Github Pages.
+A boilerplate for Github projects to save time on creating a build process and a demo pages for Github Pages.
 
 ## 
 
