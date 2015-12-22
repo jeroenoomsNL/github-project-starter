@@ -486,6 +486,8 @@ textarea {
 body {
   background: #f5f5f5;
   color: #222;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -510,7 +512,7 @@ code, pre {
 
 code {
   display: inline-block;
-  margin-top: 0.5em;
+  margin: 1em 0;
   padding: 0.75em 1.5em;
 }
 
@@ -556,7 +558,6 @@ code {
 }
 .header h1 {
   font-size: 2em;
-  margin-bottom: 0.2em;
 }
 @media (min-width: 768px) {
   .header h1 {
