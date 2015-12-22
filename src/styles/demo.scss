@@ -35,6 +35,8 @@ $color-text-secondairy: #222;
 body {
     background: $color-background;
     color: $color-text-secondairy;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,7 +62,7 @@ code, pre {
 
 code {
     display: inline-block;
-    margin-top: 0.5em;
+    margin: 1em 0;
     padding: 0.75em 1.5em;
 }
 
@@ -102,7 +104,6 @@ code {
 
     h1 {
         font-size: 2em;
-        margin-bottom: 0.2em;
 
         @include breakpoint(md) {
             font-size: 3em;
