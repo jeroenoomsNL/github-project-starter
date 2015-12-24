@@ -1,8 +1,8 @@
 {
   "name": "github-project-starter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Jeroen Ooms (@jeroenooms)",
-  "description": "A boilerplate for Github frontend projects to save time on creating a build process and a demo pages for Github Pages.",
+  "description": "A boilerplate for Github projects to save time on creating a build process and a demo pages for Github Pages.",
   "main": "",
   "devDependencies": {
     "browser-sync": "^2.10.1",
@@ -28,7 +28,10 @@
   },
   "keywords": [
     "javascript",
-    "css"
+    "css",
+    "github pages",
+    "boilerplate",
+    "create"
   ],
   "license": "MIT",
   "engines": {
