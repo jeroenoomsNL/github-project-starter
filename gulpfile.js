@@ -19,7 +19,7 @@ var config = {
         scripts: 'dist/scripts',
         styles: 'dist/styles'
     },
-    autoprefixer: ['last 2 versions', 'Explorer >= 8', 'Firefox >= 25']
+    autoprefixer: ['last 2 versions', 'Explorer >= 10', 'Firefox >= 25']
 };
 
 gulp.task('styles', function () {
@@ -27,7 +27,7 @@ gulp.task('styles', function () {
             precision: 10,
             sourcemap: params.production ? false : true,
             style: params.production ? 'compressed' : 'expanded',
-            loadPath: [ 'node_modules' ]
+            loadPath: ['node_modules']
         })
         .on('error', function(error) {
             console.log(error);
@@ -42,7 +42,7 @@ gulp.task('styles', function () {
 gulp.task('images', function () {
     return gulp.src([config.src.images + '/**/*'])
         .pipe($.plumber())
-        .pipe(gulp.dest(config.dist.scripts))
+        .pipe(gulp.dest(config.dist.images))
         .pipe($.size({title: 'images'}));
 });
 
@@ -50,13 +50,13 @@ gulp.task('scripts', function () {
     return gulp.src([config.src.scripts + '/**/*.js'])
         .pipe($.plumber())
         .pipe(params.production ? $.uglify() : $.util.noop())
-        .pipe(gulp.dest( config.dist.scripts ))
+        .pipe(gulp.dest(config.dist.scripts))
         .pipe($.size({title: 'scripts'}));
 });
 
 gulp.task('html', function () {
     return gulp.src([config.src.base + '/**/*.html'])
-        .pipe(gulp.dest( config.dist.base ))
+        .pipe(gulp.dest(config.dist.base))
         .pipe($.size({title: 'html'}));
 });
 
@@ -87,21 +87,17 @@ gulp.task('watch', ['build'], function () {
     gulp.watch(config.dist.base + '/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('build', ['jshint', 'scripts', 'images', 'styles', 'html']);
-
+// deploy to Github Pages
 gulp.task('deploy', ['build'], function() {
     params.message = params.m || params.message;
 
     var options = {};
-    options.message = params.message || 'Update '+ new Date();
+    options.message = params.message || 'Update ' + new Date();
 
     return gulp.src(config.dist.base + '/**/*')
         .pipe($.ghPages(options));
 });
 
-
-
-
+gulp.task('build', ['jshint', 'scripts', 'images', 'styles', 'html']);
 
 gulp.task('default', ['build']);
-
