@@ -84,7 +84,7 @@ gulp.task('watch', ['build'], function () {
     gulp.watch([config.src.scripts + '/**/*.js'], ['scripts']);
     gulp.watch([config.src.base + '/**/*.html'], ['html']);
 
-    gulp.watch(config.dist.base + '/**/*').on('change', browserSync.reload);
+    browserSync.watch(config.dist.base + '/**/*').on('change', browserSync.reload);
 });
 
 // deploy to Github Pages
