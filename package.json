@@ -22,6 +22,9 @@
     "jshint-stylish": "^2.1.0",
     "rimraf": "^2.4.4"
   },
+  "dependencies": {
+    "initialize-css": "^0.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jeroenoomsNL/github-project-starter.git"

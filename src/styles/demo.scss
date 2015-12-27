@@ -3,27 +3,32 @@
  */
 
 
-/* config */
+// config
 $max-width: 960px;
 
-/* breakpoints use: @include breakpoint(xs); */ 
+// breakpoints use: @include breakpoint(xs);
 $breakpoint-small: 767px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 960px;
 
-/* colors */
+// colors
 $color-background: #f5f5f5;
-$color-primary: #3498db;
-$color-secondairy: #2c3e50;
-$color-text-primary: #f1f1f1;
-$color-text-secondairy: #222;
+$color-accent-light: #3498db;
+$color-accent-dark: #2c3e50;
+$color-text-accent: #f1f1f1;
 
-/* import dependencies */
-@import "helpers/normalize";
-@import "helpers/boilerplate";
+// initialize configuration
+$initialize-block-margins: 0 0 0.75em;
+$initialize-color: #222;
+$initialize-heading-color: $color-accent-dark;
+$initialize-heading-font-family: 'Lato', sans-serif;
+$initialize-heading-margins: 1em 0 0.5em;
+
+// import dependencies
+@import "initialize-css/dist/initialize";
 @import "helpers/breakpoints";
 
-/* extends */
+// extends
 %wrapper {
     padding: 0 2em;
     margin: 0 auto;
@@ -31,25 +36,19 @@ $color-text-secondairy: #222;
     position: relative;
 }
 
-/* demo page styling */
+// demo page styling
 body {
     background: $color-background;
-    color: $color-text-secondairy;
     font-size: 18px;
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: $color-secondairy;
-    margin-bottom: 0.25em;
-
-    & + p {
-        margin-top: 0;
-    }
-}
-
 a {
-    color: $color-primary;
+    color: $color-accent-light;
+
+    &:hover {
+        color: $color-accent-dark;
+    }
 }
 
 code, pre {
@@ -79,7 +78,7 @@ code {
 }
 
 .header {
-    background: $color-primary;
+    background: $color-accent-light;
     padding: 2em 0;
 
     @include breakpoint(md) {
@@ -98,7 +97,6 @@ code {
 
     h1, h2 {
         color: #f1f1f1;
-        font-family: 'Lato', sans-serif;
         margin: 0;
     }
 
@@ -129,7 +127,7 @@ code {
     .header-buttons {
 
         .header-button {
-            background: $color-secondairy;
+            background: $color-accent-dark;
             border-radius: 0.3em;
             color: white;
             display: block;
@@ -137,6 +135,10 @@ code {
             padding: 1em;
             text-align: center;
             width: 10em;
+
+            &:hover {
+                background: darken($color-accent-dark, 10);
+            }
         }
 
         .header-button:first-child {
@@ -160,8 +162,8 @@ code {
 }
 
 .footer {
-    background: $color-secondairy;
-    color: $color-text-primary;
+    background: $color-accent-dark;
+    color: $color-text-accent;
     padding: 2em 0;
 
     &-wrapper {
@@ -169,6 +171,6 @@ code {
     }
 
     a {
-        color: $color-text-primary;
+        color: $color-text-accent;
     }
 }
