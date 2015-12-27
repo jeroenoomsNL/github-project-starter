@@ -1,6 +1,6 @@
 {
   "name": "github-project-starter",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Jeroen Ooms (@jeroenooms)",
   "description": "A boilerplate for Github projects to save time on creating a build process and a demo pages for Github Pages.",
   "main": "",
@@ -21,6 +21,9 @@
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
     "rimraf": "^2.4.4"
+  },
+  "dependencies": {
+    "initialize-css": "^0.2.0"
   },
   "repository": {
     "type": "git",
