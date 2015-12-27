@@ -1,6 +1,6 @@
 {
   "name": "github-project-starter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Jeroen Ooms (@jeroenooms)",
   "description": "A boilerplate for Github projects to save time on creating a build process and a demo pages for Github Pages.",
   "main": "",
