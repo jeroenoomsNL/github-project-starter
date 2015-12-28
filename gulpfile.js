@@ -74,6 +74,7 @@ gulp.task('clean', function (cb) {
 gulp.task('watch', ['build'], function () {
     browserSync.init({
         reloadDelay: 100,
+        notify: false,
         server: {
             baseDir: './' + config.dist.base
         }
