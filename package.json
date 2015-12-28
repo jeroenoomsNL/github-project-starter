@@ -20,10 +20,10 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
-    "rimraf": "^2.4.4"
+    "rimraf": "^2.5.0"
   },
   "dependencies": {
-    "initialize-css": "^0.2.0"
+    "initialize-css": "^0.2.1"
   },
   "repository": {
     "type": "git",
